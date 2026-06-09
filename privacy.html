@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Ministry Roots</title>
+  <link rel="icon" href="https://app.ministryroots.com/favicon/roots-logo.PNG"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #080503;
+      color: #f0ece6;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    .bg {
+      position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+    }
+    .bg-grad {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,#080503 0%,#150b06 20%,#09101a 45%,#0b1420 65%,#150b06 85%,#060810 100%);
+    }
+    .orb1 {
+      position: absolute; top: -10%; left: -5%; width: 50vw; height: 50vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(224,123,42,0.18) 0%, transparent 70%);
+      filter: blur(60px);
+    }
+    .orb2 {
+      position: absolute; bottom: -10%; right: -5%; width: 45vw; height: 45vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(44,95,122,0.14) 0%, transparent 70%);
+      filter: blur(60px);
+    }
+    .wrapper {
+      position: relative; z-index: 1;
+      max-width: 780px; margin: 0 auto;
+      padding: 90px 28px 100px;
+    }
+    header {
+      text-align: center; margin-bottom: 56px;
+    }
+    .logo {
+      width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto 16px;
+    }
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13px; font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 4px; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 600; color: #fff;
+      margin-bottom: 10px;
+    }
+    .meta {
+      font-size: 13px; color: rgba(255,255,255,0.35);
+      margin-bottom: 6px;
+    }
+    .divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, transparent, #E07B2A, transparent);
+      margin: 28px auto 0;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600;
+      color: #E07B2A;
+      margin-bottom: 14px; margin-top: 4px;
+    }
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px; font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      margin: 18px 0 8px;
+      text-transform: uppercase; letter-spacing: 0.8px;
+    }
+    p { margin-bottom: 14px; color: rgba(255,255,255,0.72); }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 8px 0 14px 20px; }
+    li { margin-bottom: 6px; color: rgba(255,255,255,0.65); }
+    strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    .highlight {
+      background: rgba(224,123,42,0.1);
+      border: 1px solid rgba(224,123,42,0.25);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+    }
+    .contact-block {
+      background: rgba(224,123,42,0.08);
+      border: 1px solid rgba(224,123,42,0.2);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+    .contact-block p { margin-bottom: 6px; }
+    .contact-block a { color: #E07B2A; text-decoration: none; }
+    .contact-block a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      font-size: 12px; color: rgba(255,255,255,0.25);
+    }
+    footer a { color: rgba(224,123,42,0.6); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: #E07B2A; }
+    @media (max-width: 600px) {
+      .card { padding: 22px 20px; }
+      .wrapper { padding: 40px 16px 80px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Back to home nav -->
+  <div style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(28,13,4,0.9);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.07);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="https://ministryroots.com" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="https://app.ministryroots.com/favicon/roots-logo.PNG" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" alt="Roots"/>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;letter-spacing:2px;">ROOTS</span>
+    </a>
+    <div style="display:flex;gap:20px;align-items:center;">
+      <a href="https://ministryroots.com/#pricing" style="font-family:'Outfit',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Pricing</a>
+      <a href="https://ministryroots.com/privacy" style="font-family:'Outfit',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Privacy</a>
+      <a href="https://ministryroots.com/terms" style="font-family:'Outfit',sans-serif;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:none;">Terms</a>
+      <a href="https://app.ministryroots.com" style="background:linear-gradient(135deg,#B85520,#E07B2A);color:#fff;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;padding:8px 16px;border-radius:8px;text-decoration:none;">Open App ↗</a>
+    </div>
+  </div>
+
+  <div class="bg"><div class="bg-grad"></div><div class="orb1"></div><div class="orb2"></div></div>
+  <div class="wrapper">
+    <header>
+      <img src="https://app.ministryroots.com/favicon/roots-logo.PNG" class="logo" alt="Roots"/>
+      <div class="brand">Ministry Roots</div>
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: June 03, 2026</p>
+      <p class="meta">ministryroots.com &nbsp;·&nbsp; dylan.hovanec@gmail.com</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="card">
+      <p>Ministry Roots ("Ministry Roots," "Roots," "we," "us," or "our") is a sole proprietorship operated by Dylan Hovanec that operates the Roots application available at ministryroots.com. We are committed to protecting the privacy of youth ministry leaders, volunteers, and the students whose information is managed through our platform.</p>
+      <p>By using Roots, you agree to the practices described in this policy.</p>
+    </div>
+
+    <div class="card">
+      <h2>1. Who We Are</h2>
+      <p>Roots is a youth ministry relationship-tracking platform designed exclusively for licensed youth ministry leaders, pastors, volunteers, and church organizations. Roots is operated by Ministry Roots, a sole proprietorship owned and operated by Dylan Hovanec.</p>
+      <div class="contact-block">
+        <p><strong>Ministry Roots</strong></p>
+        <p>Dylan Hovanec, Founder</p>
+        <p>Email: <a href="mailto:dylan.hovanec@gmail.com">dylan.hovanec@gmail.com</a></p>
+        <p>Website: <a href="https://ministryroots.com">ministryroots.com</a></p>
+        <p>Phone: <a href="tel:3305074797">330-507-4797</a></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>2. Information We Collect</h2>
+      <h3>Account Information</h3>
+      <ul>
+        <li>Your name and email address</li>
+        <li>Profile photo (optional)</li>
+        <li>Display name and nickname</li>
+        <li>Phone number (optional)</li>
+        <li>Social media handles (optional)</li>
+        <li>A PIN you create for app security</li>
+      </ul>
+      <h3>Student / Minor Information</h3>
+      <p>Roots is designed for youth ministry professionals to manage information about the students they serve. This may include information about minors under 18. Information stored about students may include:</p>
+      <ul>
+        <li>Full name, nickname, date of birth, and grade</li>
+        <li>Phone number, email, school, and campus</li>
+        <li>Parent or guardian name and contact information</li>
+        <li>Profile photos and attendance / check-in records</li>
+        <li>Private conversation notes logged by ministry leaders</li>
+        <li>Spiritual decision records (e.g., salvation, baptism, rededication)</li>
+      </ul>
+      <div class="highlight"><strong>Important:</strong> Student information is entered exclusively by authorized ministry leaders. Roots does not collect this information directly from minors.</div>
+      <h3>Workspace & Ministry Data</h3>
+      <ul>
+        <li>Workspace settings and member roster</li>
+        <li>Events, itineraries, and attendance records</li>
+        <li>Community chat messages, prayer requests, and polls</li>
+        <li>Photos uploaded to the workspace photo feed</li>
+      </ul>
+      <h3>Technical & Usage Data</h3>
+      <ul>
+        <li>Device type, operating system, and browser</li>
+        <li>IP address and approximate location</li>
+        <li>App usage patterns and error logs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. How We Use Your Information</h2>
+      <ul>
+        <li>Provide, maintain, and improve the Roots platform</li>
+        <li>Enable ministry leaders to track relationships with students</li>
+        <li>Send email notifications about workspace activity and events</li>
+        <li>Authenticate users and enforce app security</li>
+        <li>Respond to support requests</li>
+        <li>Detect and prevent fraud and security incidents</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <div class="highlight"><strong>We do NOT use student or volunteer information for advertising, marketing, or sale to third parties.</strong></div>
+    </div>
+
+    <div class="card">
+      <h2>4. Children's Privacy (COPPA)</h2>
+      <p>The App is not directed at children under 13 and does not allow children to create accounts or directly submit personal information.</p>
+      <ul>
+        <li>Ministry leaders are responsible for obtaining parental consent before entering student information.</li>
+        <li>We do not knowingly collect personal information directly from children under 13.</li>
+        <li>If you believe a child's information has been entered without appropriate authorization, contact us and we will promptly remove it.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. Data Storage & Security</h2>
+      <p>Roots is built on Google Firebase, which provides industry-standard security including data encrypted in transit (TLS/SSL) and at rest. The App also enforces:</p>
+      <ul>
+        <li>Mandatory PIN protection for all users</li>
+        <li>Optional biometric authentication (Face ID / Touch ID)</li>
+        <li>Automatic app locking when backgrounded or reopened</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Data Sharing</h2>
+      <p>We do not sell, rent, or trade your personal information. We use the following third-party services:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> — data hosting, authentication, storage</li>
+        <li><strong>Resend</strong> — transactional email delivery</li>
+        <li><strong>Vercel</strong> — application hosting and deployment</li>
+      </ul>
+      <p>We may disclose information if required by law or to protect the safety of individuals.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Data Retention</h2>
+      <p>We retain your data for as long as your account is active. You may request deletion at any time by contacting us. When a Workspace is deleted, all associated data is permanently removed.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Your Rights</h2>
+      <ul>
+        <li><strong>Access:</strong> Request a copy of your information</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+        <li><strong>Deletion:</strong> Request deletion of your account and data</li>
+        <li><strong>Portability:</strong> Request an export of your data</li>
+      </ul>
+      <p>To exercise any of these rights, email <a href="mailto:dylan.hovanec@gmail.com" style="color:#E07B2A;">dylan.hovanec@gmail.com</a>. We will respond within 30 days.</p>
+    </div>
+
+    <div class="card">
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify users of material changes via email or in-app notice. Continued use of Roots after changes take effect constitutes acceptance.</p>
+    </div>
+
+    <div class="card">
+      <h2>10. Contact Us</h2>
+      <div class="contact-block">
+        <p><strong>Ministry Roots</strong></p>
+        <p>Dylan Hovanec, Founder</p>
+        <p>Email: <a href="mailto:dylan.hovanec@gmail.com">dylan.hovanec@gmail.com</a></p>
+        <p>Website: <a href="https://ministryroots.com">ministryroots.com</a></p>
+        <p>Phone: <a href="tel:3305074797">330-507-4797</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Ministry Roots · All rights reserved</p>
+      <p style="margin-top:10px;">
+        <a href="https://ministryroots.com">Home</a>
+        <a href="https://ministryroots.com/privacy">Privacy Policy</a>
+        <a href="https://ministryroots.com/terms">Terms of Service</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
