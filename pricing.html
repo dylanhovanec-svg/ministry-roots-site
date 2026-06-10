@@ -546,25 +546,38 @@
       }
     }
 
-    function handleCheckout(plan) {
+    async function handleCheckout(plan) {
       const billing = isAnnual ? 'annual' : 'monthly';
       const btn = event.currentTarget;
-      btn.textContent = 'Redirecting...';
+      const originalText = btn.textContent;
+      btn.textContent = 'Loading...';
       btn.disabled = true;
 
-      // Get userId from URL param if coming from app
+      // Get user info from URL params if coming from app
       const params = new URLSearchParams(window.location.search);
-      const userId = params.get('uid');
+      const userId = params.get('uid') || '';
       const userEmail = params.get('email') || '';
       const userName = params.get('name') || '';
 
-      // Always redirect to the app — it handles Stripe checkout on the same domain
-      const checkoutParams = new URLSearchParams({ upgrade: plan, billing });
-      if (userId) checkoutParams.set('uid', userId);
-      if (userEmail) checkoutParams.set('email', userEmail);
-      if (userName) checkoutParams.set('name', userName);
-
-      window.location.href = 'https://app.ministryroots.com/?' + checkoutParams.toString();
+      try {
+        const res = await fetch('https://app.ministryroots.com/api/stripe-checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan, billing, userId, userEmail, userName }),
+        });
+        const data = await res.json();
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert('Checkout error: ' + (data.error || 'Unknown error'));
+          btn.textContent = originalText;
+          btn.disabled = false;
+        }
+      } catch (e) {
+        alert('Checkout failed: ' + e.message);
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     }
   </script>
 </body>
