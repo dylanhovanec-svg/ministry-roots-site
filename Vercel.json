@@ -1,10 +1,9 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/privacy",        "destination": "/privacy.html" },
-    { "source": "/terms",          "destination": "/terms.html" },
-    { "source": "/pricing",        "destination": "/pricing.html" },
-    { "source": "/delete-account", "destination": "/delete-account.html" },
-    { "source": "/(.*)",           "destination": "/index.html" }
+  "routes": [
+    { "src": "/pricing", "dest": "/pricing.html" },
+    { "src": "/privacy", "dest": "/privacy.html" },
+    { "src": "/terms", "dest": "/terms.html" },
+    { "src": "/delete-account", "dest": "/delete-account.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
