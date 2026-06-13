@@ -439,9 +439,32 @@
     }
 
     /* ── RESPONSIVE ── */
+    /* Mobile nav tab bar */
+    .mobile-nav-tabs {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(28,13,4,0.97);
+      backdrop-filter: blur(24px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+      justify-content: space-around;
+    }
+    .mobile-nav-tab {
+      display: flex; flex-direction: column; align-items: center; gap: 3px;
+      background: none; border: none; cursor: pointer;
+      font-family: 'Outfit', sans-serif; font-size: 10px; font-weight: 600;
+      color: rgba(255,255,255,0.4); padding: 4px 12px;
+      letter-spacing: 0.5px; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .mobile-nav-tab.active { color: var(--orange); }
+    .mobile-nav-tab span { font-size: 20px; }
     @media (max-width: 900px) {
       nav { padding: 14px 20px; }
       .nav-tabs { display: none; }
+      .nav-cta { font-size: 12px; padding: 8px 14px; }
+      .mobile-nav-tabs { display: flex; }
+      .page { padding-bottom: 72px; }
       .features-grid, .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
       .steps-row { grid-template-columns: 1fr 1fr; gap: 28px; }
       .steps-row::before { display: none; }
@@ -453,10 +476,19 @@
       .hero-stats { gap: 28px; }
     }
     @media (max-width: 600px) {
-      .section { padding: 56px 18px; }
+      .section { padding: 56px 16px; }
       .steps-row { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
       .hero-stats { flex-direction: column; gap: 20px; }
+      .hero { padding: 60px 20px 40px; }
+      .hero h1 { font-size: clamp(32px, 8vw, 52px); }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions a, .hero-actions button { text-align: center; width: 100%; }
+      .quick-strip-grid { grid-template-columns: 1fr !important; }
+      .about-card { padding: 24px 18px !important; }
+      nav { padding: 12px 16px; }
+      .nav-logo-text { font-size: 17px; }
+      .products-grid { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -470,6 +502,7 @@
     </div>
     <div class="nav-tabs">
       <button class="nav-tab active" onclick="showPage('home')">Home</button>
+      <button class="nav-tab" onclick="showPage('products')">Products</button>
       <button class="nav-tab" onclick="showPage('features')">Features</button>
       <button class="nav-tab" onclick="showPage('about')">About</button>
       <button class="nav-tab" onclick="showPage('pricing')">Pricing</button>
@@ -551,6 +584,67 @@
         <h2 class="section-title">Know your students like never before.</h2>
         <p class="section-sub" style="margin:0 auto 36px;">Free to start. No credit card. No pressure. Just a better way to do youth ministry.</p>
         <a href="https://app.ministryroots.com" class="btn-primary" style="font-size:15px; padding:17px 42px;">Open Roots — It's Free ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ PRODUCTS PAGE ══════════════ -->
+  <div id="page-products" class="page">
+    <div class="section">
+      <div class="container">
+        <p class="section-eyebrow">What we build</p>
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-sub" style="margin:0 auto 56px;">Ministry Roots builds tools designed specifically for youth ministry teams — focused on relationships, not just administration.</p>
+
+        <div class="products-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:28px; max-width:900px; margin:0 auto;">
+
+          <!-- Roots -->
+          <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:24px; padding:36px 32px; position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#B85520,#E07B2A,#F0A060);"></div>
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
+              <img src="https://app.ministryroots.com/favicon/roots-logo.PNG" alt="Roots" style="width:64px; height:64px; border-radius:16px; object-fit:cover; border:1px solid rgba(255,255,255,0.1);"/>
+              <div>
+                <div style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; color:#fff;">Roots</div>
+                <div style="font-size:12px; color:var(--orange); font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-top:2px;">Available Now</div>
+              </div>
+            </div>
+            <p style="font-size:14px; color:rgba(255,255,255,0.65); line-height:1.8; margin-bottom:24px;">The core Ministry Roots platform. Track student relationships, log conversations, manage events, and keep your whole team connected — all in one place built specifically for youth ministry.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px;">
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Student Profiles</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Conversation Logs</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Event Management</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Team Chat</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Check-in Tracking</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Photo Albums</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Prayer Board</span>
+              <span style="background:rgba(224,123,42,0.12); border:1px solid rgba(224,123,42,0.25); border-radius:20px; padding:4px 12px; font-size:11px; color:rgba(255,255,255,0.7);">Polls</span>
+            </div>
+            <a href="https://app.ministryroots.com" style="display:inline-block; background:linear-gradient(135deg,#B85520,#E07B2A); color:#fff; border-radius:10px; padding:12px 24px; font-family:'Outfit',sans-serif; font-size:13px; font-weight:600; text-decoration:none;">Open Roots ↗</a>
+          </div>
+
+          <!-- Sprout -->
+          <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:24px; padding:36px 32px; position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#2D5016,#4A6741,#7EC870);"></div>
+            <div style="display:flex; align-items:center; gap:16px; margin-bottom:24px;">
+              <!-- Gray placeholder logo for Sprout -->
+              <div style="width:64px; height:64px; border-radius:16px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <span style="font-size:28px;">🌱</span>
+              </div>
+              <div>
+                <div style="font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; color:#fff;">Sprout</div>
+                <div style="font-size:12px; color:#7EC870; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-top:2px;">Coming Soon</div>
+              </div>
+            </div>
+            <!-- Coming soon overlay content -->
+            <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); border-radius:16px; padding:32px 24px; text-align:center;">
+              <div style="font-size:36px; margin-bottom:16px;">🚧</div>
+              <div style="font-family:'Cormorant Garamond',serif; font-size:20px; color:#fff; margin-bottom:10px;">More Information Coming Soon</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.4); line-height:1.7;">Sprout is a new product from Ministry Roots currently in development. Stay tuned for updates.</div>
+              <div style="margin-top:20px; display:inline-block; background:rgba(126,200,112,0.1); border:1px solid rgba(126,200,112,0.25); border-radius:20px; padding:6px 16px; font-size:11px; color:#7EC870; font-weight:600; letter-spacing:1px;">IN DEVELOPMENT</div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -853,11 +947,16 @@
     function showPage(name) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.mobile-nav-tab').forEach(t => t.classList.remove('active'));
       document.getElementById('page-' + name).classList.add('active');
-      const tabs = document.querySelectorAll('.nav-tab');
-      const order = ['home','features','about','pricing'];
+      // Desktop nav — match by text
+      const order = ['home','products','features','about','pricing'];
       const idx = order.indexOf(name);
-      if (idx >= 0) tabs[idx].classList.add('active');
+      const tabs = document.querySelectorAll('.nav-tab');
+      if (idx >= 0 && tabs[idx]) tabs[idx].classList.add('active');
+      // Mobile nav
+      const mob = document.getElementById('mob-' + name);
+      if (mob) mob.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -892,5 +991,24 @@
       el.classList.toggle('open');
     }
   </script>
+  <!-- MOBILE BOTTOM NAV -->
+  <div class="mobile-nav-tabs" id="mobile-nav">
+    <button class="mobile-nav-tab active" onclick="showPage('home')" id="mob-home">
+      <span>🏡</span>Home
+    </button>
+    <button class="mobile-nav-tab" onclick="showPage('products')" id="mob-products">
+      <span>📦</span>Products
+    </button>
+    <button class="mobile-nav-tab" onclick="showPage('features')" id="mob-features">
+      <span>✨</span>Features
+    </button>
+    <button class="mobile-nav-tab" onclick="showPage('about')" id="mob-about">
+      <span>👤</span>About
+    </button>
+    <button class="mobile-nav-tab" onclick="showPage('pricing')" id="mob-pricing">
+      <span>💰</span>Pricing
+    </button>
+  </div>
+
 </body>
 </html>
